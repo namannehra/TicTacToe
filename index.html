@@ -6,4 +6,7 @@ if ('registerElement' in document && 'createShadowRoot' in HTMLElement.prototype
 } else {
 	document.write('<script src="assets\/components\/webcomponentsjs\/webcomponents.min.js"><\/script>');//for useless browsers
 }
-</script><link rel=import href=tic-tac-toe/tic-tac-toe.html><meta name=mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><link rel=icon sizes=192x192 href=icons/icon-4x.png><link rel=icon sizes=144x144 href=icons/icon-3x.png><link rel=icon sizes=96x96 href=icons/icon-2x.png><link rel=icon sizes=48x48 href=icons/icon-1x.png><link rel=apple-touch-icon href=icons/icon-4x.png></head><body unresolved><tic-tac-toe></tic-tac-toe></body></html>
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('sw.js');
+}
+</script><link rel=import href=tic-tac-toe/tic-tac-toe.html><meta name=mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><link rel=icon sizes=192x192 href=icons/icon-4x.png><link rel=icon sizes=144x144 href=icons/icon-3x.png><link rel=icon sizes=96x96 href=icons/icon-2x.png><link rel=icon sizes=48x48 href=icons/icon-1x.png><link rel=apple-touch-icon href=icons/apple-touch-icon.png></head><body unresolved><tic-tac-toe></tic-tac-toe></body></html>
