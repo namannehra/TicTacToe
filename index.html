@@ -1,12 +1,15 @@
 <!doctype html><html><head lang=en-in><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><meta name=theme-color content=#009688><title>TicTacToe</title><link rel=manifest href=home/manifest.json><style>
 html,body{height:100%}body{background-color:#009688;color:#fff;font-family:'RobotoDraft',sans-serif;margin:0;overflow-y:hidden}
 </style><script type=text/javascript>
+'use strict';
 if ('registerElement' in document && 'createShadowRoot' in HTMLElement.prototype && 'import' in document.createElement('link') && 'content' in document.createElement('template')) {
 	// We're using a browser with native Web Components support!
 } else {
 	document.write('<script src="assets\/components\/webcomponentsjs\/webcomponents.min.js"><\/script>');//for useless browsers
 }
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('sw.js');
-}
+onload = function() {
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('sw.js');
+	}
+};
 </script><link rel=import href=tic-tac-toe/tic-tac-toe.html><meta name=mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><link rel=icon sizes=192x192 href=icons/icon-4x.png><link rel=icon sizes=144x144 href=icons/icon-3x.png><link rel=icon sizes=96x96 href=icons/icon-2x.png><link rel=icon sizes=48x48 href=icons/icon-1x.png><link rel=apple-touch-icon href=icons/apple-touch-icon.png></head><body unresolved><tic-tac-toe></tic-tac-toe></body></html>
